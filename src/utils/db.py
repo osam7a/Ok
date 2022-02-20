@@ -17,7 +17,6 @@ class EcoUser(aobject):
         else:
             self.inDatabase = True
         await cur.close()
-        
 
     async def getBalance(self):
         cur = await self.db.cursor()

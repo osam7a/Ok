@@ -26,6 +26,21 @@ class Economy(Cog):
                 await mem.openAccount()
             await ctx.send(f"**Balance**: {await mem.getBalance()}")
 
+    @command(aliases=['give'])
+    async def pay(self, ctx, member: Member, amount: int):
+        async with EconomyDatabase() as db:
+            mem = await db.getUser(member)
+            author = await db.getUser(ctx.author)
+            if not mem.inDatabase:
+                await mem.openAccount()
+            elif not author.inDatabase:
+                await author.openAccount()
+            if await author.getBalance()-amount < 0:
+                await ctx.send(f"You do not have that amount, {member.mention}")
+            else:
+                await mem.setBalance(await mem.getBalance() + amount)
+                await author.setBalance(await author.getBalance() - amount)
+
     @command()
     @is_owner()
     async def setBal(self, ctx, user: Member, bal):
