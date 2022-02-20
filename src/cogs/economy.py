@@ -36,7 +36,7 @@ class Economy(Cog):
             elif not author.inDatabase:
                 await author.openAccount()
             if await author.getBalance()-amount < 0:
-                await ctx.send(f"You do not have that amount, {member.mention}")
+                await ctx.send(f"You do not have that amount, {ctx.author.mention}")
             else:
                 await mem.setBalance(await mem.getBalance() + amount)
                 await author.setBalance(await author.getBalance() - amount)
