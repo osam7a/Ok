@@ -1,13 +1,30 @@
-[INFO] Sun Feb 20 05:40:09 2022 | pay Was successfully executed by osam7a#1017
-[INFO] Sun Feb 20 05:40:14 2022 | help Was successfully executed by osam7a#1017
-[INFO] Sun Feb 20 05:40:18 2022 | pay Was successfully executed by osam7a#1017
-[INFO] Sun Feb 20 05:40:30 2022 | reload Was successfully executed by osam7a#1017
-[INFO] Sun Feb 20 05:40:39 2022 | bal Was successfully executed by osam7a#1017
-[INFO] Sun Feb 20 05:40:48 2022 | setBal Was successfully executed by osam7a#1017
-[INFO] Sun Feb 20 05:40:53 2022 | pay Was successfully executed by osam7a#1017
-[INFO] Sun Feb 20 05:41:00 2022 | bal Was successfully executed by osam7a#1017
-[INFO] Sun Feb 20 05:41:06 2022 | bal Was successfully executed by osam7a#1017
-[INFO] Sun Feb 20 05:41:11 2022 | setBal Was successfully executed by osam7a#1017
-[INFO] Sun Feb 20 05:41:16 2022 | pay Was successfully executed by osam7a#1017
-[INFO] Sun Feb 20 05:41:32 2022 | reload Was successfully executed by osam7a#1017
-[INFO] Sun Feb 20 05:41:37 2022 | pay Was successfully executed by osam7a#1017
+[INFO] Mon Feb 21 15:35:05 2022 | reload Was successfully executed by osam7a#1017
+[INFO] Mon Feb 21 15:35:06 2022 | lb Was successfully executed by osam7a#1017
+[ERROR] Mon Feb 21 15:35:06 2022 | Traceback (most recent call last):
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 176, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "c:\Users\osama\Documents\Ok - Copy\src\cogs\economy.py", line 32, in lb
+    print(await i.getBalance())
+  File "c:\Users\osama\Documents\Ok - Copy\src\utils\db.py", line 23, in getBalance
+    res = await cur.execute(f"SELECT balance FROM {self.table} WHERE id = {self.id}")
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\cursor.py", line 37, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\cursor.py", line 31, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\core.py", line 129, in _execute
+    return await future
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\core.py", line 102, in run
+    result = function()
+sqlite3.OperationalError: row value misused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\bot_base.py", line 561, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 930, in invoke
+    await injected(*ctx.args, **ctx.kwargs)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 185, in wrapped
+    raise CommandInvokeError(exc) from exc
+disnake.ext.commands.errors.CommandInvokeError: Command raised an exception: OperationalError: row value misused
+

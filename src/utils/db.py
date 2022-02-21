@@ -53,6 +53,15 @@ class EconomyDatabase:
         await self.db.commit()
 
         return self
+    
+    async def EconomyLeaderboard(self):
+        cur = await self.db.cursor()
+        await cur.execute(f"SELECT * FROM {self.table} ORDER BY balance")
+        a = await cur.fetchall()
+        users = []
+        for i in a:
+            users.append(await EcoUser(a[0], self.db, self.table))
+        return users[:10]
 
     async def getUser(self, user: User):
         return await EcoUser(user.id, self.db, self.table)

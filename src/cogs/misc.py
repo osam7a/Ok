@@ -54,12 +54,39 @@ class Misc(Cog):
             await emb(ctx, f"```\n{request.json()['output']}\n```")
         except:
             await ctx.send("something went wrong...")
+    
+    @command()
+    async def fact(self, ctx):
+        async with aiohttp.ClientSession() as cs:
+            async with cs.get("https://api.aakhilv.me/facts/json") as resp:
+                _json = await resp.json()
+                fact = _json['text']
+                await ctx.send(f"**{fact}**")
+    
+    @command()
+    async def yomama(self, ctx, *, user: Member = None):
+        user = user or ctx.author
+        async with aiohttp.ClientSession() as cs:
+            async with cs.get("https://yomomma-api.herokuapp.com/jokes") as res:
+                _json = await res.json()
+                joke = _json['joke']
+                await ctx.send(f"{user.mention} {joke}")
+    
+    @command()
+    async def quote(self, ctx):
+        async with aiohttp.ClientSession() as cs:
+            async with cs.get("https://inspiration.goprogram.ai/") as res:
+                _json = await res.json()
+                await ctx.send(f"\"{_json['quote']}\" - {_json['author']}")
 
     @command()
-    async def textart(self, ctx: Context, *, message):
-        if len(ctx.message.mentions) >= 1:
-            return await ctx.send("Mentions are not allowed. Only ASCII characters ([A-Z0-9!@#$%^&*(){}[]/])")
-        await ctx.send(f"```\n{'shortened text (less than 15)' if len(message) > 15 else ''}\n{text2art(message if len(message) < 15 else message[:15])}\n```")
+    async def textart(self, ctx: Context, *, message): 
+        ref = ctx.message.reference
+        try:
+            msg = self.bot.get_message(ref.message_id)
+            await msg.reply(f"```\n{'shortened text (less than 15)' if len(message) > 15 else ''}\n{text2art(message if len(message) < 15 else message[:15])}\n```")
+        except:
+            await ctx.reply(f"```\n{'shortened text (less than 15)' if len(message) > 15 else ''}\n{text2art(message if len(message) < 15 else message[:15])}\n```")
 
     @command()
     async def binary(self, ctx, encodeordecode, *, message):

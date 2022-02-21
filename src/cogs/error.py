@@ -3,6 +3,7 @@ import random
 
 # Exceptions Imports
 from disnake.ext.commands import (
+    Bot,
     Cog,
     BotMissingPermissions,
     MissingPermissions,
@@ -27,7 +28,7 @@ from ..utils.utils import emb
 from ..utils.logging import Log
 
 class ErrorHandler(Cog):
-    def __init__(self, bot):
+    def __init__(self, bot: Bot):
         self.bot = bot
         self.commandLog = Log("src/logs/command.log")
 
@@ -79,6 +80,12 @@ class ErrorHandler(Cog):
                 )
             )
         elif isinstance(error, CommandOnCooldown):
+            if round(error.retry_after) > 60*60:
+                    time = f"{round(error.retry_after / (60*60), 2)} hours"
+            elif round(error.retry_after) > 60:
+                    time = f"{round(error.retry_after / 60, 2)} minutes"
+            else:
+                    time = f"{round(error.retry_after, 2)} seconds"
             cooldown_embed = Embed(
                 title=random.choice(
                     [
@@ -91,7 +98,7 @@ class ErrorHandler(Cog):
                         "NEGATORY.",
                     ]
                 ),
-                description=f"This command is on a cooldown! try again in `{round(error.retry_after, 2)}` seconds.",
+                description=f"This command is on a cooldown! try again in {time}",
                 color=Color.red(),
             )
             await ctx.send(embed=cooldown_embed)

@@ -18,7 +18,7 @@ class Ok(Bot):
         self.commandLog = Log("src/logs/command.log")
         self.color = Color.blue()
         self.listenerPrefix = f"okAI "
-        self.cwd = cwd = Path(__file__).parents[0]
+        self.cwd = Path(__file__).parents[0]
 
     def run(self):
         @self.after_invoke

@@ -3,7 +3,6 @@ from disnake import Colour
 from disnake import Embed
 
 import requests
-
 color = Colour.blue()
 
 class aobject(object):
