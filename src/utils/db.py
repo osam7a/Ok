@@ -20,10 +20,10 @@ class EcoUser(aobject):
 
     async def getBalance(self):
         cur = await self.db.cursor()
-        res = await cur.execute(f"SELECT balance FROM {self.table} WHERE id = {self.id}")
+        res = await cur.execute(f"SELECT * FROM {self.table} WHERE id = {self.id}")
         a = await cur.fetchone()
         await cur.close()
-        return a[0]
+        return a[1]
 
     async def setBalance(self, amount: int):
         cur = await self.db.cursor()

@@ -37,7 +37,11 @@ class Math(Cog):
     @command()
     async def sqrt(self, ctx, number: Union[float, int]):
         return await emb(ctx, f"```\n{sqrt(number)}\n```")
-    
+
+    @command()
+    async def cubicroot(self, ctx, number: Union[float, int]):
+        return await emb(ctx, f"```\n{number ** (1./3.)}\n```")
+
     @command()
     async def cos(self, ctx, number: Union[float, int]):
         return await emb(ctx, f"```\n{cos(number)}\n```")
@@ -48,9 +52,9 @@ class Math(Cog):
 
     @command()
     async def calculate(self, ctx, equation):
+        if len(equation) > 7:
+            return await ctx.send("Too long equation!")
         result = simpleeval.simple_eval(equation)
-        if result > 2000:
-            result = result[:-1900]
         return await emb(ctx, f"```\n{result}\n```")
         
     @command()

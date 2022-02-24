@@ -81,11 +81,11 @@ class ErrorHandler(Cog):
             )
         elif isinstance(error, CommandOnCooldown):
             if round(error.retry_after) > 60*60:
-                    time = f"{round(error.retry_after / (60*60), 2)} hours"
+                    time = f"{round(error.retry_after / (60*60))} hours"
             elif round(error.retry_after) > 60:
-                    time = f"{round(error.retry_after / 60, 2)} minutes"
+                    time = f"{round(error.retry_after / 60)} minutes"
             else:
-                    time = f"{round(error.retry_after, 2)} seconds"
+                    time = f"{round(error.retry_after)} seconds"
             cooldown_embed = Embed(
                 title=random.choice(
                     [

@@ -1,8 +1,8 @@
-[INFO] Mon Feb 21 15:34:55 2022 | Cog "src.cogs.economy" was loaded.
-[INFO] Mon Feb 21 15:34:55 2022 | Cog "src.cogs.error" was loaded.
-[INFO] Mon Feb 21 15:34:55 2022 | Cog "src.cogs.images" was loaded.
-[INFO] Mon Feb 21 15:34:55 2022 | Cog "src.cogs.listeners" was loaded.
-[INFO] Mon Feb 21 15:35:00 2022 | Cog "src.cogs.mathCog" was loaded.
-[INFO] Mon Feb 21 15:35:00 2022 | Cog "src.cogs.misc" was loaded.
-[INFO] Mon Feb 21 15:35:00 2022 | Cog "src.cogs.moderation" was loaded.
-[INFO] Mon Feb 21 15:35:00 2022 | Cog "src.cogs.ownerDevTools" was loaded.
+[INFO] Thu Feb 24 14:55:27 2022 | Cog "src.cogs.economy" was loaded.
+[INFO] Thu Feb 24 14:55:27 2022 | Cog "src.cogs.error" was loaded.
+[INFO] Thu Feb 24 14:55:27 2022 | Cog "src.cogs.images" was loaded.
+[INFO] Thu Feb 24 14:55:27 2022 | Cog "src.cogs.listeners" was loaded.
+[INFO] Thu Feb 24 14:55:29 2022 | Cog "src.cogs.math" was loaded.
+[INFO] Thu Feb 24 14:55:29 2022 | Cog "src.cogs.misc" was loaded.
+[INFO] Thu Feb 24 14:55:29 2022 | Cog "src.cogs.moderation" was loaded.
+[INFO] Thu Feb 24 14:55:29 2022 | Cog "src.cogs.ownerDevTools" was loaded.

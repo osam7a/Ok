@@ -1,11 +1,148 @@
-[INFO] Mon Feb 21 15:35:05 2022 | reload Was successfully executed by osam7a#1017
-[INFO] Mon Feb 21 15:35:06 2022 | lb Was successfully executed by osam7a#1017
-[ERROR] Mon Feb 21 15:35:06 2022 | Traceback (most recent call last):
+[INFO] Thu Feb 24 14:55:38 2022 | execute Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 14:55:54 2022 | execute Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 14:56:45 2022 | reload Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 14:56:59 2022 | bal Was successfully executed by osam7a#1017
+[ERROR] Thu Feb 24 14:56:59 2022 | Traceback (most recent call last):
   File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 176, in wrapped
     ret = await coro(*args, **kwargs)
-  File "c:\Users\osama\Documents\Ok - Copy\src\cogs\economy.py", line 32, in lb
+  File "C:\Users\osama\Documents\Ok - Copy\src\cogs\economy.py", line 48, in bal
+    await ctx.send(f"**Balance**: {self.coin(await mem.getBalance())}")
+AttributeError: 'Economy' object has no attribute 'coin'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\bot_base.py", line 561, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 930, in invoke
+    await injected(*ctx.args, **ctx.kwargs)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 185, in wrapped
+    raise CommandInvokeError(exc) from exc
+disnake.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: 'Economy' object has no attribute 'coin'
+
+[INFO] Thu Feb 24 14:57:16 2022 | reload Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 14:57:17 2022 | bal Was successfully executed by osam7a#1017
+[ERROR] Thu Feb 24 14:57:17 2022 | Traceback (most recent call last):
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 176, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "C:\Users\osama\Documents\Ok - Copy\src\cogs\economy.py", line 48, in bal
+    await ctx.send(f"**Balance**: {self.coin(await mem.getBalance())}")
+TypeError: 'str' object is not callable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\bot_base.py", line 561, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 930, in invoke
+    await injected(*ctx.args, **ctx.kwargs)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 185, in wrapped
+    raise CommandInvokeError(exc) from exc
+disnake.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: 'str' object is not callable
+
+[INFO] Thu Feb 24 14:57:21 2022 | textart Was successfully executed by alexandros#6106
+[INFO] Thu Feb 24 14:58:01 2022 | reload Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 14:58:05 2022 | bal Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 14:58:15 2022 | crime Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 14:58:36 2022 | bal Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 14:58:42 2022 | help Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:00:07 2022 | reload Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:00:14 2022 | calculate Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:00:19 2022 | calculate Was successfully executed by osam7a#1017
+[ERROR] Thu Feb 24 15:00:19 2022 | Traceback (most recent call last):
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 176, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "C:\Users\osama\Documents\Ok - Copy\src\cogs\math.py", line 59, in calculate
+    result = int(str(result)[:-1900])
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\bot_base.py", line 561, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 930, in invoke
+    await injected(*ctx.args, **ctx.kwargs)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 185, in wrapped
+    raise CommandInvokeError(exc) from exc
+disnake.ext.commands.errors.CommandInvokeError: Command raised an exception: ValueError: invalid literal for int() with base 10: ''
+
+[INFO] Thu Feb 24 15:00:28 2022 | reload Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:00:32 2022 | calculate Was successfully executed by osam7a#1017
+[ERROR] Thu Feb 24 15:00:32 2022 | Traceback (most recent call last):
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 176, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "C:\Users\osama\Documents\Ok - Copy\src\cogs\math.py", line 59, in calculate
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\bot_base.py", line 561, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 930, in invoke
+    await injected(*ctx.args, **ctx.kwargs)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 185, in wrapped
+    raise CommandInvokeError(exc) from exc
+disnake.ext.commands.errors.CommandInvokeError: Command raised an exception: ValueError: invalid literal for int() with base 10: ''
+
+[INFO] Thu Feb 24 15:01:44 2022 | reload Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:01:50 2022 | calculate Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:01:55 2022 | calculate Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:02:54 2022 | execute Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:03:08 2022 | execute Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:03:20 2022 | execute Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:04:25 2022 | execute Was successfully executed by xxJonakAdiptaxx#2464
+[INFO] Thu Feb 24 15:07:31 2022 | reload Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:07:45 2022 | execute Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:08:24 2022 | reload Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:08:27 2022 | execute Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:09:21 2022 | execute Was successfully executed by xxJonakAdiptaxx#2464
+[INFO] Thu Feb 24 15:09:31 2022 | bal Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:09:38 2022 | crime Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:09:41 2022 | bal Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:09:56 2022 | crime Was successfully executed by xxJonakAdiptaxx#2464
+[INFO] Thu Feb 24 15:11:17 2022 | reload Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:12:04 2022 | reload Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:12:09 2022 | crime Was successfully executed by osam7a#1017
+[ERROR] Thu Feb 24 15:12:09 2022 | Traceback (most recent call last):
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 176, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "C:\Users\osama\Documents\Ok - Copy\src\cogs\economy.py", line 75, in crime
+    decentAmountLoss = open("src/assets/economyStatements/decentAmountLoss", "r").readlines()
+FileNotFoundError: [Errno 2] No such file or directory: 'src/assets/economyStatements/decentAmountLoss'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\bot_base.py", line 561, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 930, in invoke
+    await injected(*ctx.args, **ctx.kwargs)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 185, in wrapped
+    raise CommandInvokeError(exc) from exc
+disnake.ext.commands.errors.CommandInvokeError: Command raised an exception: FileNotFoundError: [Errno 2] No such file or directory: 'src/assets/economyStatements/decentAmountLoss'
+
+[INFO] Thu Feb 24 15:12:30 2022 | reload Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:12:54 2022 | reload Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:12:55 2022 | crime Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:13:01 2022 | bal Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:15:43 2022 | help Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:15:50 2022 | stupid Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:16:10 2022 | grayscale Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:16:12 2022 | invert Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:16:22 2022 | pixelate Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:16:25 2022 | help Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:16:30 2022 | youtube Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:16:38 2022 | youtube Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:16:47 2022 | help Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:16:57 2022 | lb Was successfully executed by osam7a#1017
+[ERROR] Thu Feb 24 15:16:57 2022 | Traceback (most recent call last):
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 176, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "C:\Users\osama\Documents\Ok - Copy\src\cogs\economy.py", line 31, in lb
     print(await i.getBalance())
-  File "c:\Users\osama\Documents\Ok - Copy\src\utils\db.py", line 23, in getBalance
+  File "C:\Users\osama\Documents\Ok - Copy\src\utils\db.py", line 23, in getBalance
     res = await cur.execute(f"SELECT balance FROM {self.table} WHERE id = {self.id}")
   File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\cursor.py", line 37, in execute
     await self._execute(self._cursor.execute, sql, parameters)
@@ -28,3 +165,38 @@ Traceback (most recent call last):
     raise CommandInvokeError(exc) from exc
 disnake.ext.commands.errors.CommandInvokeError: Command raised an exception: OperationalError: row value misused
 
+[INFO] Thu Feb 24 15:17:57 2022 | reload Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 15:18:07 2022 | lb Was successfully executed by osam7a#1017
+[ERROR] Thu Feb 24 15:18:07 2022 | Traceback (most recent call last):
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 176, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "C:\Users\osama\Documents\Ok - Copy\src\cogs\economy.py", line 31, in lb
+    print(await i.getBalance())
+  File "C:\Users\osama\Documents\Ok - Copy\src\utils\db.py", line 23, in getBalance
+    res = await cur.execute(f"SELECT * FROM {self.table} WHERE id = {self.id}")
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\cursor.py", line 37, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\cursor.py", line 31, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\core.py", line 129, in _execute
+    return await future
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\core.py", line 102, in run
+    result = function()
+sqlite3.OperationalError: row value misused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\bot_base.py", line 561, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 930, in invoke
+    await injected(*ctx.args, **ctx.kwargs)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\core.py", line 185, in wrapped
+    raise CommandInvokeError(exc) from exc
+disnake.ext.commands.errors.CommandInvokeError: Command raised an exception: OperationalError: row value misused
+
+[INFO] Thu Feb 24 15:23:06 2022 | openaccount Was successfully executed by alexandros#6106
+[INFO] Thu Feb 24 18:45:50 2022 | help Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 18:45:55 2022 | bal Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 18:45:59 2022 | crime Was successfully executed by osam7a#1017
+[INFO] Thu Feb 24 18:46:10 2022 | help Was successfully executed by osam7a#1017

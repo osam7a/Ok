@@ -6,11 +6,10 @@ from ..utils.db import EconomyDatabase
 
 class Economy(Cog):
     def __init__(self, bot) -> None:
-        self.bot = bot 
-        self.emojis = {e.name: str(e) for e in self.bot.emojis}
-        self.emoji = self.emojis['Discash']
-        self.coin = lambda am: f"{self.emoji}{am}"
- 
+        self.bot = bot
+        emojis = {e.name:str(e) for e in self.bot.emojis}
+        self.coin = lambda m: f"{emojis['Discash']} {m}"
+
     @command()
     async def openaccount(self, ctx):
         async with EconomyDatabase() as db:
@@ -64,7 +63,7 @@ class Economy(Cog):
                 await author.setBalance(await author.getBalance() - amount)
     
     @command()
-    @cooldown(1, 60*10, BucketType.user)
+    @cooldown(1, 60*5, BucketType.user)
     async def crime(self, ctx):
         async with EconomyDatabase() as db:
             mem = await db.getUser(ctx.author)
@@ -73,6 +72,7 @@ class Economy(Cog):
             smallAmountLoss = open("src/assets/economyStatements/smallAmountLoss.txt", "r").readlines()
             smallAmountWin = open("src/assets/economyStatements/smallAmountWin.txt", "r").readlines()
             decentAmountWin = open("src/assets/economyStatements/decentAmountWin.txt", "r").readlines()
+            decentAmountLoss = open("src/assets/economyStatements/decentAmountLoss.txt", "r").readlines()
             _ = {
                 "SmallAmount": {
                     "win": {
@@ -90,7 +90,7 @@ class Economy(Cog):
                         "gain": random.randint(500, 2000)
                     },
                     "loss": {
-                        "statements": ['lost decentamount'],
+                        "statements": decentAmountLoss,
                         "gain": random.randint(500, 2000)
                     }
                 },
