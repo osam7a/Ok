@@ -48,7 +48,10 @@ class Math(Cog):
 
     @command()
     async def calculate(self, ctx, equation):
-        return await emb(ctx, f"```\n{simpleeval.simple_eval(equation)}\n```")
+        result = simpleeval.simple_eval(equation)
+        if result > 2000:
+            result = result[:-1900]
+        return await emb(ctx, f"```\n{result}\n```")
         
     @command()
     async def round(self, ctx, number: float):
