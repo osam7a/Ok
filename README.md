@@ -1,2 +1,2 @@
 # Ok Bot
-This is a shitty bot made by osam7a#1017...
+A Multi-Purpose (Unfinished) discord bot made using disnake
