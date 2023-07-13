@@ -10,11 +10,6 @@ class Images(Cog):
         self.bot = bot
     
     @command()
-    async def gay(self, ctx, *, user: Member = None):
-        user = user or ctx.author
-        await sendOverlay(ctx, "/canvas/gay", {"avatar": user.avatar.with_format('png').url}, user)
-    
-    @command()
     async def wasted(self, ctx, *, user: Member = None):
         user = user or ctx.author
         if user.avatar == None:
